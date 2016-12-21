@@ -71,12 +71,12 @@ $(function() {
 });
 
 //top　slide
- // $(function() {
- //     $('.single-item').slick({
- //         autoplay: true,
- //         speed: 800,
- //         pauseOnHover: true,
- //         autoplaySpeed: 6000,
- //         fade: true
- //     });
- // });
+ $(function() {
+     $('.single-item').slick({
+         autoplay: true,
+         speed: 800,
+         pauseOnHover: true,
+         autoplaySpeed: 6000,
+         fade: true
+     });
+ });
