@@ -1,0 +1,17 @@
+@import "../utilities/variables.sass"
+
+.footer
+  background-color: $background
+  padding: 40px 20px 80px
+  a
+    &,
+    &:visited
+      color: $text
+      &:hover
+        color: $text-strong
+        text-decoration: underline
+      &:not(.icon)
+        // text-decoration: underline
+        &:hover
+          border-bottom-color: $link
+          text-decoration: underline

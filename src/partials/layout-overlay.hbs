@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>{{#block "title"}}{{/block}} | {{ site.title }}</title>
+ {{#block "css"}}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ site.root }}assets/css/style.css">
+  <link rel="stylesheet" href="{{ site.root }}assets/css/develop.css">
+  <link rel="stylesheet" href="{{ site.root }}assets/css/slick.css">
+  <link rel="stylesheet" href="{{ site.root }}assets/css/slick-theme.css">
+
+ {{/block}}
+ {{> head-meta }}
+</head>
+
+<body id="top">
+{{#block "header"}}
+{{> header-overlay }}
+{{/block}}
+
+<main class="main">
+
+{{#block "body"}}
+{{/block}}
+
+</main>
+
+{{#block "footer"}}
+{{> footer }}
+{{/block}}
+
+{{#block "js"}}
+<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="{{ site.root }}assets/js/slick.min.js"></script>
+<script>
+  $(function() {
+  $('.center-item').slick({
+    infinite: true,
+    dots:true,
+    slidesToShow: 1,
+    centerMode: true, //要素を中央寄せ
+    centerPadding:'100px', //両サイドの見えている部分のサイズ
+    autoplay:true, //自動再生
+    responsive: [{
+      breakpoint: 480,
+        settings: {
+          centerMode: false,
+      }
+    }]
+  });
+});
+</script>
+<script src="{{ site.root }}assets/js/common.js"></script>
+{{/block}}
+
+</body>
+</html>

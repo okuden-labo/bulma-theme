@@ -1,0 +1,345 @@
+/****
+--------------------------------------------
+TABLE OF CONTENTS
+  - 1.共通要素
+  - 2.個別要素
+-----------------------------------------  */
+/*----------------------
+ 1.共通要素
+---------------------  */
+
+.block-entry{
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+}
+.block-entry.is-slim{
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.block-entry p:not(:last-child),
+.block-entry ol:not(:last-child),
+.block-entry ul:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+/* section */
+
+.sectionBlock{
+   padding: 40px 0;
+}
+
+/* contents title */
+.main-tit {
+  font-size: 24px;
+  margin-bottom: 35px;
+  font-weight: bold;
+  line-height: 1.47;
+}
+
+/* hero */
+.hero-title{
+  max-width: 770px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-buttons.is-nomargin{
+  margin-top: 0;
+}
+
+.hero.is-grey-lighter{
+  background:   #f5f7fa;
+}
+
+.title.is-hero-title{
+  font-size: 24px;
+  line-height: 1.47;
+ font-weight: bold;
+}
+
+/* page header */
+  .page__header{
+   padding: 40px 20px;
+   background-color: #f5f7fa;
+   text-align: center;
+  }
+
+.hero.has-bgImage{
+  background-image: url(../images/base/ttl_bg01.jpg);
+}
+
+.hero.has-bgImage .title {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* top slider */
+.center-item .slick-next {
+  right: 20px;
+  z-index: 99;
+}
+.center-item .slick-prev {
+  left: 15px;
+  z-index: 100;
+}
+.slider {
+  margin: 0 0 50px;
+}
+.slider img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* pagetop link*/
+
+.pageTopLink {
+  clear: both;
+  position: fixed;
+  z-index: 200;
+  right: 0;
+  bottom: 50px;
+  text-align: right;
+  line-height: 1.2
+}
+
+.pageTopLink a {
+  display: block;
+  padding: 13px 15px;
+  color: #fff;
+  background: #0059b2
+}
+
+@media only screen and (max-width: 959px) {
+  .pageTopLink {
+    display: block;
+    position: static
+  }
+  .pageTopLink a {
+    padding: 8px 0;
+    text-align: center;
+    border-top: #f1f1f1 solid 2px
+  }
+/*  .pageTopLink a:after {
+    content: 'トップへ戻る'
+  }*/
+}
+/* footer*/
+.footer li {
+  display: inline-block;
+  padding-left: 18px;
+}
+
+/* parts */
+.button{
+font-size: 14px;
+}
+
+/* contactArea */
+.contactArea {
+    margin: 0 0 60px 0;
+    padding: 20px;
+    border: solid #ddd 2px;
+  }
+  .contactArea__number{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.8;
+  }
+
+/*----------------------
+ responsivなtable 2種
+---------------------  */
+
+/* responsiv table (.tableのみ利用可能 )*/
+@media only screen and (max-width: 480px) {
+    .is-responsiv th,
+    .is-responsiv td {
+      width: 100%;
+      display: block;
+      border-top: none;
+      border-bottom: none;
+    }
+    .is-responsiv th {
+      background-color: #eef2f7;
+    }
+  }
+
+/* scroll table */
+  /* 指定方法
+  <div class="scroll-table-wrapper">
+    <div class="scroll-table-container">
+      <table class="table scroll-table">
+  */
+
+@media screen and (max-width: 640px) {
+    .scroll-table-wrapper:before,
+    .scroll-table-wrapper:after {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+    .scroll-table-wrapper .scroll-table-container {
+      overflow-x: scroll;
+    }
+    .scroll-table-wrapper .scroll-table-container table.scroll-table
+    {
+        width:740px;
+    }
+}
+
+
+
+/*----------------------
+ 2.個別要素
+---------------------  */
+
+/* blog*/
+
+  .mainContent > .entry{
+    margin-bottom: 20px;
+  }
+
+@media screen and (min-width: 980px) {
+  .mainContent article{
+    padding-right: 30px;
+  }
+}
+/*google map*/
+
+  .ggmap {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 45px;
+}
+
+.ggmap iframe,
+.ggmap object,
+.ggmap embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* over lay メニュー */
+
+/* ナビげーション */
+.header-btn {
+  cursor: pointer;
+  display: block;
+  height: 65px;
+  position: relative;
+}
+
+.header-btn > .header-item {
+  align-items: center;
+  display: flex;
+  padding: 10px;
+}
+
+#overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#inner {
+  text-align: center;
+  padding: 1em 1.5em 0.5em 1.5em;
+  border-radius: 4px;
+  display: block;
+  width: 20em;
+  vertical-align: middle;
+  max-width: 100%;
+  margin: 30px auto;
+  background: #fff;
+}
+
+#inner h2 {
+  font-size: 1.2em;
+  border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+  padding-bottom: 1em;
+}
+
+#inner .links {
+  list-style: none;
+  margin-bottom: 1.5em;
+  padding: 0;
+}
+
+#inner .links li {
+  padding: 0;
+}
+
+#inner .links li a {
+  border-bottom: 1px solid #ccc;
+  display: block;
+  font-size: 0.9em;
+  font-weight: 700;
+  line-height: 1.85em;
+  padding: 0.75em 0;
+}
+
+#inner .links li a:hover {
+  background: #f5f7fa;
+}
+
+/* メインナビ */
+#mainNav {
+  background: #FFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid #eee;
+}
+
+    .main-nav {
+  display: flex;;
+  justify-content: space-between;
+  width: 100%;
+}
+.main-nav li a{
+   margin: 8px;
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+}
+.main-nav a:hover {
+    border-radius: 5px;
+    background: #60B99A;
+    color: #fff;
+  }
+  
+/*ul.main-nav {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+ul.main-nav li {
+  display: table-cell;
+  padding: 12px 0;
+  vertical-align: middle;
+  text-align: center;
+
+}
+ul.main-nav li a{
+    color:white;
+}*/
+.tagLine {
+  padding-top: 0px;
+  font-size: 85.7%;
+  line-height: 1.2;
+}
