@@ -3,6 +3,6 @@
     "title": "サイト名",
     "description": "サイトの説明文が入ります",
     "keywords": "キーワード1,キーワード2,キーワード3",
-    "root": "/",
+    "root": "./",
     "url": "www.macnet.jp"
 }
