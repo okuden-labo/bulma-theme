@@ -38,12 +38,12 @@
          <span></span> 
         </span>
         <div class="nav-right nav-menu" id="nav-menu">
-          <span class="nav-item"><a href="info.html">お知らせ</a></span> 
-          <span class="nav-item"><a href="grid.html">grid</a></span> 
-          <span class="nav-item"><a href="table.html">table</a></span> 
-          <span class="nav-item"><a href="elements.html">elements</a></span> 
-          <span class="nav-item"><a href="components.html">components</a></span> 
-          <span class="nav-item"><a href="helpers.html">helpers</a></span>
+          <span class="nav-item"><a href="../grid.html">grid</a></span> 
+          <span class="nav-item"><a href="../table.html">table</a></span> 
+          <span class="nav-item"><a href="../elements.html">elements</a></span> 
+          <span class="nav-item"><a href="../components.html">components</a></span> 
+          <span class="nav-item"><a href="../helpers.html">helpers</a></span>
+          <span class="nav-item"><a href="/contact/" class="button is-info">お問い合わせ</a></span> 
         </div>
       </nav>
     </div>
@@ -68,6 +68,8 @@
 
 <section class="section" id="contact-mail">
   <div class="container">
+<div class="content block-entry is-slim">
+  <h3>シンプルなメールフォーム</h3>
   <form method="post" action="index.php" enctype="multipart/form-data">
     <div class="content block-entry is-slim">
       <label class="label">お名前 <span class="badge">必須</span></label>
@@ -118,7 +120,99 @@
       </p>
     </div>
     </form>
-  </div>
+  </div></div>
+</section>
+<hr class="container">
+
+<section class="section is-medium">
+      <div class="container">
+        <div class="content block-entry is-slim">
+         <h3>左に項目が入るメールフォーム</h3>
+         <p>このフォームはまだプログラムを読み込んでません。</p>
+           <form method="post" action="index.php" enctype="multipart/form-data">
+          <div class="control is-horizontal">
+            <div class="control-label">
+              <label class="label">お名前</label>
+            </div>
+            <div class="control is-grouped">
+              <p class="control is-expanded">
+                <input class="input" type="text" placeholder="姓">
+              </p>
+              <p class="control is-expanded">
+                <input class="input" type="text" placeholder="名">
+              </p>
+            </div>
+          </div>
+          <div class="control is-horizontal">
+            <div class="control-label">
+              <label class="label">ふりがな</label>
+            </div>
+            <div class="control is-grouped">
+              <p class="control is-expanded">
+                <input class="input" type="text" placeholder="姓">
+              </p>
+              <p class="control is-expanded">
+                <input class="input" type="text" placeholder="名">
+              </p>
+            </div>
+          </div>
+          <div class="control is-horizontal">
+            <div class="control-label">
+              <label class="label">メールアドレス</label>
+            </div>
+            <p class="control">
+              <input class="input" type="email" placeholder="Email">
+            </p>
+          </div>
+          <div class="control is-horizontal">
+            <div class="control-label">
+              <label class="label">お電話番号</label>
+            </div>
+            <div class="control is-grouped">
+              <p class="control is-expanded">
+                <input class="input" type="text">
+              </p>
+              <p class="control is-expanded">
+                <input class="input" type="text">
+              </p>
+              <p class="control is-expanded">
+                <input class="input" type="text">
+              </p>
+            </div>
+          </div>
+          <div class="control is-horizontal">
+            <div class="control-label">
+              <label class="label">お問い合わせ項目</label>
+            </div>
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select>
+                  <option>選択してください</option>
+                  <option>事業に関するお問い合わせ</option>
+                  <option>採用に関するお問い合わせ</option>
+                  <option>製品情報に関するお問い合わせ</option>
+                  <option>その他</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="control is-horizontal">
+            <div class="control-label">
+              <label class="label">お問い合わせ内容</label>
+            </div>
+            <div class="control">
+              <textarea class="textarea"></textarea>
+            </div>
+          </div>
+          <p class="control">
+            <div class="has-text-centered">
+              <button class="button is-large is-info">送信する</button>
+            </div>
+          </p>
+        </div>
+        </form>
+      </div>
+      </div>
 </section>
 
 
@@ -148,12 +242,13 @@
         <div class="footer__inner content has-text-centered">
          <ul>
           <li><a href="./">ホーム</a></li>
-          <li><a href="info.html">お知らせ</a></li>
           <li><a href="grid.html">grid</a></li>
           <li><a href="table.html">table</a></li>
           <li><a href="elements.html">elements</a></li>
           <li><a href="components.html">components</a></li>
           <li><a href="helpers.html">helpers</a></li>
+          <li><a href="info.html">お知らせ</a></li>
+          <li><a href="./contact/">お問い合わせ</a></li>
         </ul>
         <div class="footer__copy">&copy; 2016 company-name. Co.,Ltd All Rights Reserved.</div>
       </div>

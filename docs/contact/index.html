@@ -69,7 +69,7 @@
     <div class="container">
       <div class="content block-entry">
 <ul>
-  <li>このメールフォームをサーバーに上げる際は、index.htmlをinput.htmlにして使ってください。</li>
+  <li>このファイルはHTMLの表示用のものです。実際にサーバーに上げる際は、index.htmlを削除してinput.htmlを使ってください。</li>
   <li>このメールフォームは<a href="https://github.com/dounokouno/TransmitMail">TransmitMail</a>を元にカスタマイズしたものです。</li>
 <li>TransmitMailの使い方は <a href="https://github.com/dounokouno/TransmitMail/wiki">https://github.com/dounokouno/TransmitMail/wiki</a> を参考に</li>
 </ul>
@@ -86,43 +86,24 @@
     <div class="content block-entry is-slim">
       <label class="label">お名前 <span class="badge">必須</span></label>
       <p class="control is-expanded">
-      <input class="input" type="text" name="お名前" value="{$お名前}" />
-                <input class="input" type="hidden" name="required[]" value="お名前" />
-                {if:$required.お名前}
-                <span class="help is-danger">{$required.お名前} </span>
-                {/if:$required.お名前} <br>
+      <input class="input" type="text" name="お名前" value="" />
       </p>
       <label class="label">ふりがな <span class="badge">必須</span></label>
       <p class="control is-expanded">
-        <input class="input" type="text" name="ふりがな" value="{$ふりがな}" />
-                <input type="hidden" name="required[]" value="ふりがな">
-                {if:$required.ふりがな}
-                <span class="help is-danger">{$required.ふりがな}</span>
-                {/if:$required.ふりがな} <br>
+        <input class="input" type="text" name="ふりがな" value="" />
       </p>
       <label class="label">メールアドレス <span class="badge">必須</span></label>
       <p class="control is-expanded">
-        <input class="input" type="text" name="メールアドレス" value="{$メールアドレス}" placeholder="半角英数字で入力してください"/>
-                <input type="hidden" name="email[]" value="メールアドレス" />
-                <input type="hidden" name="required[]" value="メールアドレス"/>
-                {if:$email.メールアドレス}
-                <span class="help is-danger">{$email.メールアドレス}</span>
-                {/if:$email.メールアドレス}
-                {if:$required.メールアドレス}
-                <span class="help is-danger">{$required.メールアドレス}</span>
-                {/if:$required.メールアドレス}
+        <input class="input" type="text" name="メールアドレス" value="" placeholder="半角英数字で入力してください"/>
       </p>
       <label class="label">電話番号 <span class="badge">必須</span></label>
       <p class="control is-expanded">
-        <input class="input" type="text" name="電話番号" value="{$電話番号}" />
-              <input type="hidden" name="required[]" value="電話番号" />
-              {if:$required.電話番号}
-              <span class="help is-danger">{$required.電話番号}</span>
-              {/if:$required.電話番号}
+        <input class="input" type="text" name="電話番号" value="" />
+             
       </p>
       <label class="label">お問い合わせ内容 <span class="badge">必須</span></label>
       <p class="control is-expanded">
-        <textarea class="textarea" rows="6" cols="30" name="お問い合わせ内容" class="wide">{$お問い合わせ内容}</textarea>
+        <textarea class="textarea" rows="6" cols="30" name="お問い合わせ内容" class="wide"></textarea>
       </p>
 
       <p class="control is-expanded">

@@ -1,0 +1,8 @@
+config:
+    to_email: aaa@gmail.com
+    to_subject: ［株式会社カンパニー］お問い合わせ
+    auto_reply: true
+    auto_reply_email: メールアドレス
+    auto_reply_subject: ［株式会社カンパニー］お問い合わせありがとうございます
+    auto_reply_name: 株式会社カンパニー
+    checkmode: 2
