@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <title>Components | サイト名</title>
+  <title>お問い合わせ | サイト名</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/develop.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/develop.css">
    <!-- Canonical Meta -->
    <link rel="canonical" href="www.macnet.jp">
    <!-- Viewport Meta-->
@@ -30,7 +30,7 @@
     <div class="container has-text-centered">
       <nav class="nav">
         <div class="nav-left">
-          <a class="nav-item" href="./"> <img src="./assets/images/base/logo.png" alt="Logo"> </a>
+          <a class="nav-item" href="../"> <img src="../assets/images/base/logo.png" alt="Logo"> </a>
         </div>
         <span id="nav-toggle" class="nav-toggle">
          <span></span> 
@@ -38,12 +38,12 @@
          <span></span> 
         </span>
         <div class="nav-right nav-menu" id="nav-menu">
+          <span class="nav-item"><a href="info.html">お知らせ</a></span> 
           <span class="nav-item"><a href="grid.html">grid</a></span> 
           <span class="nav-item"><a href="table.html">table</a></span> 
           <span class="nav-item"><a href="elements.html">elements</a></span> 
           <span class="nav-item"><a href="components.html">components</a></span> 
           <span class="nav-item"><a href="helpers.html">helpers</a></span>
-          <span class="nav-item"><a href="/contact/" class="button is-info">お問い合わせ</a></span> 
         </div>
       </nav>
     </div>
@@ -55,7 +55,7 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="title">
-       Components
+       お問い合わせ
       </h1>
       <!--<h2 class="subtitle">
         subtitleを入れる場合
@@ -65,27 +65,60 @@
 </section>
 
 
-<section class="section is-medium">
-    <div class="container">
-        <div class="content block-entry">
-            <h2>その他</h2>
-            <ul>
-<li>1.横幅100%表示</li>
-<li>2.真ん中揃え</li>
-<li>3.左揃え</li>
-<li>4.右揃え</li>
-</ul>
-<p>上記４点をボタンに適用してみます。</p>
-            <h3>横幅100%表示</h3>
-<a class="button is-fullwidth">Button</a>
-            <h3>真ん中揃え</h3>
-<a class="button has-text-centered">Button</a>
-            <h3>左揃え</h3>
-<a class="button has-text-left">Button</a>
-            <h3>右揃え</h3>
-            <a class="button has-text-right">Button</a>
+
+<section class="section" id="contact-mail">
+  <div class="container">
+  <form method="post" action="index.php" enctype="multipart/form-data">
+    <div class="content block-entry is-slim">
+      <label class="label">お名前 <span class="badge">必須</span></label>
+      <p class="control is-expanded">
+      <input class="input" type="text" name="お名前" value="{$お名前}" />
+                <input class="input" type="hidden" name="required[]" value="お名前" />
+                {if:$required.お名前}
+                <span class="help is-danger">{$required.お名前} </span>
+                {/if:$required.お名前} <br>
+      </p>
+      <label class="label">ふりがな <span class="badge">必須</span></label>
+      <p class="control is-expanded">
+        <input class="input" type="text" name="ふりがな" value="{$ふりがな}" />
+                <input type="hidden" name="required[]" value="ふりがな">
+                {if:$required.ふりがな}
+                <span class="help is-danger">{$required.ふりがな}</span>
+                {/if:$required.ふりがな} <br>
+      </p>
+      <label class="label">メールアドレス <span class="badge">必須</span></label>
+      <p class="control is-expanded">
+        <input class="input" type="text" name="メールアドレス" value="{$メールアドレス}" placeholder="半角英数字で入力してください"/>
+                <input type="hidden" name="email[]" value="メールアドレス" />
+                <input type="hidden" name="required[]" value="メールアドレス"/>
+                {if:$email.メールアドレス}
+                <span class="help is-danger">{$email.メールアドレス}</span>
+                {/if:$email.メールアドレス}
+                {if:$required.メールアドレス}
+                <span class="help is-danger">{$required.メールアドレス}</span>
+                {/if:$required.メールアドレス}
+      </p>
+      <label class="label">電話番号 <span class="badge">必須</span></label>
+      <p class="control is-expanded">
+        <input class="input" type="text" name="電話番号" value="{$電話番号}" />
+              <input type="hidden" name="required[]" value="電話番号" />
+              {if:$required.電話番号}
+              <span class="help is-danger">{$required.電話番号}</span>
+              {/if:$required.電話番号}
+      </p>
+      <label class="label">お問い合わせ内容 <span class="badge">必須</span></label>
+      <p class="control is-expanded">
+        <textarea class="textarea" rows="6" cols="30" name="お問い合わせ内容" class="wide">{$お問い合わせ内容}</textarea>
+      </p>
+
+      <p class="control is-expanded">
+      <div class="has-text-centered">
+      <input type="submit" value="送信する" class="button is-outlined is-medium is-info">
         </div>
+      </p>
     </div>
+    </form>
+  </div>
 </section>
 
 
@@ -115,20 +148,19 @@
         <div class="footer__inner content has-text-centered">
          <ul>
           <li><a href="./">ホーム</a></li>
+          <li><a href="info.html">お知らせ</a></li>
           <li><a href="grid.html">grid</a></li>
           <li><a href="table.html">table</a></li>
           <li><a href="elements.html">elements</a></li>
           <li><a href="components.html">components</a></li>
           <li><a href="helpers.html">helpers</a></li>
-          <li><a href="info.html">お知らせ</a></li>
-          <li><a href="/contact/">お問い合わせ</a></li>
         </ul>
         <div class="footer__copy">&copy; 2016 company-name. Co.,Ltd All Rights Reserved.</div>
       </div>
  </footer>
 
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-<script src="./assets/js/common.js"></script>
+<script src="../assets/js/common.js"></script>
 
 </body>
 </html>

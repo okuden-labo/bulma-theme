@@ -1,0 +1,168 @@
+{{#extend "layout-contact"}}
+{{#content "title"}}お問い合わせ{{/content}}
+{{#content "category"}}contact{{/content}}
+{{#content "body"}}
+
+  <section class="section">
+    <div class="container">
+      <div class="content block-entry">
+<ul>
+  <li>このメールフォームをサーバーに上げる際は、index.htmlをinput.htmlにして使ってください。</li>
+  <li>このメールフォームは<a href="https://github.com/dounokouno/TransmitMail">TransmitMail</a>を元にカスタマイズしたものです。</li>
+<li>TransmitMailの使い方は <a href="https://github.com/dounokouno/TransmitMail/wiki">https://github.com/dounokouno/TransmitMail/wiki</a> を参考に</li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<section class="section" id="contact-mail">
+  <div class="container">
+<div class="content block-entry is-slim">
+  <h3>シンプルなメールフォーム</h3>
+  <form method="post" action="index.php" enctype="multipart/form-data">
+    <div class="content block-entry is-slim">
+      <label class="label">お名前 <span class="badge">必須</span></label>
+      <p class="control is-expanded">
+      <input class="input" type="text" name="お名前" value="{$お名前}" />
+                <input class="input" type="hidden" name="required[]" value="お名前" />
+                {if:$required.お名前}
+                <span class="help is-danger">{$required.お名前} </span>
+                {/if:$required.お名前} <br>
+      </p>
+      <label class="label">ふりがな <span class="badge">必須</span></label>
+      <p class="control is-expanded">
+        <input class="input" type="text" name="ふりがな" value="{$ふりがな}" />
+                <input type="hidden" name="required[]" value="ふりがな">
+                {if:$required.ふりがな}
+                <span class="help is-danger">{$required.ふりがな}</span>
+                {/if:$required.ふりがな} <br>
+      </p>
+      <label class="label">メールアドレス <span class="badge">必須</span></label>
+      <p class="control is-expanded">
+        <input class="input" type="text" name="メールアドレス" value="{$メールアドレス}" placeholder="半角英数字で入力してください"/>
+                <input type="hidden" name="email[]" value="メールアドレス" />
+                <input type="hidden" name="required[]" value="メールアドレス"/>
+                {if:$email.メールアドレス}
+                <span class="help is-danger">{$email.メールアドレス}</span>
+                {/if:$email.メールアドレス}
+                {if:$required.メールアドレス}
+                <span class="help is-danger">{$required.メールアドレス}</span>
+                {/if:$required.メールアドレス}
+      </p>
+      <label class="label">電話番号 <span class="badge">必須</span></label>
+      <p class="control is-expanded">
+        <input class="input" type="text" name="電話番号" value="{$電話番号}" />
+              <input type="hidden" name="required[]" value="電話番号" />
+              {if:$required.電話番号}
+              <span class="help is-danger">{$required.電話番号}</span>
+              {/if:$required.電話番号}
+      </p>
+      <label class="label">お問い合わせ内容 <span class="badge">必須</span></label>
+      <p class="control is-expanded">
+        <textarea class="textarea" rows="6" cols="30" name="お問い合わせ内容" class="wide">{$お問い合わせ内容}</textarea>
+      </p>
+
+      <p class="control is-expanded">
+      <div class="has-text-centered">
+      <input type="submit" value="送信する" class="button is-outlined is-medium is-info">
+        </div>
+      </p>
+    </div>
+    </form>
+  </div></div>
+</section>
+<hr class="container">
+
+<section class="section is-medium">
+      <div class="container">
+        <div class="content block-entry is-slim">
+         <h3>左に項目が入るメールフォーム</h3>
+           <form method="post" action="index.php" enctype="multipart/form-data">
+          <div class="control is-horizontal">
+            <div class="control-label">
+              <label class="label">お名前</label>
+            </div>
+            <div class="control is-grouped">
+              <p class="control is-expanded">
+                <input class="input" type="text" placeholder="姓">
+              </p>
+              <p class="control is-expanded">
+                <input class="input" type="text" placeholder="名">
+              </p>
+            </div>
+          </div>
+          <div class="control is-horizontal">
+            <div class="control-label">
+              <label class="label">ふりがな</label>
+            </div>
+            <div class="control is-grouped">
+              <p class="control is-expanded">
+                <input class="input" type="text" placeholder="姓">
+              </p>
+              <p class="control is-expanded">
+                <input class="input" type="text" placeholder="名">
+              </p>
+            </div>
+          </div>
+          <div class="control is-horizontal">
+            <div class="control-label">
+              <label class="label">メールアドレス</label>
+            </div>
+            <p class="control">
+              <input class="input" type="email" placeholder="Email">
+            </p>
+          </div>
+          <div class="control is-horizontal">
+            <div class="control-label">
+              <label class="label">お電話番号</label>
+            </div>
+            <div class="control is-grouped">
+              <p class="control is-expanded">
+                <input class="input" type="text">
+              </p>
+              <p class="control is-expanded">
+                <input class="input" type="text">
+              </p>
+              <p class="control is-expanded">
+                <input class="input" type="text">
+              </p>
+            </div>
+          </div>
+          <div class="control is-horizontal">
+            <div class="control-label">
+              <label class="label">お問い合わせ項目</label>
+            </div>
+            <div class="control">
+              <div class="select is-fullwidth">
+                <select>
+                  <option>選択してください</option>
+                  <option>事業に関するお問い合わせ</option>
+                  <option>採用に関するお問い合わせ</option>
+                  <option>製品情報に関するお問い合わせ</option>
+                  <option>その他</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="control is-horizontal">
+            <div class="control-label">
+              <label class="label">お問い合わせ内容</label>
+            </div>
+            <div class="control">
+              <textarea class="textarea"></textarea>
+            </div>
+          </div>
+          <p class="control">
+            <div class="has-text-centered">
+              <button class="button is-large is-info">送信する</button>
+            </div>
+          </p>
+        </div>
+        </form>
+      </div>
+      </div>
+</section>
+
+{{/content}}
+{{/extend}}

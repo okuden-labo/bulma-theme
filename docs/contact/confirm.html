@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <title>Components | サイト名</title>
+  <title>お問い合わせ | サイト名</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/develop.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/develop.css">
    <!-- Canonical Meta -->
    <link rel="canonical" href="www.macnet.jp">
    <!-- Viewport Meta-->
@@ -30,7 +30,7 @@
     <div class="container has-text-centered">
       <nav class="nav">
         <div class="nav-left">
-          <a class="nav-item" href="./"> <img src="./assets/images/base/logo.png" alt="Logo"> </a>
+          <a class="nav-item" href="../"> <img src="../assets/images/base/logo.png" alt="Logo"> </a>
         </div>
         <span id="nav-toggle" class="nav-toggle">
          <span></span> 
@@ -38,11 +38,11 @@
          <span></span> 
         </span>
         <div class="nav-right nav-menu" id="nav-menu">
-          <span class="nav-item"><a href="grid.html">grid</a></span> 
-          <span class="nav-item"><a href="table.html">table</a></span> 
-          <span class="nav-item"><a href="elements.html">elements</a></span> 
-          <span class="nav-item"><a href="components.html">components</a></span> 
-          <span class="nav-item"><a href="helpers.html">helpers</a></span>
+          <span class="nav-item"><a href="../grid.html">grid</a></span> 
+          <span class="nav-item"><a href="../table.html">table</a></span> 
+          <span class="nav-item"><a href="../elements.html">elements</a></span> 
+          <span class="nav-item"><a href="../components.html">components</a></span> 
+          <span class="nav-item"><a href="../helpers.html">helpers</a></span>
           <span class="nav-item"><a href="/contact/" class="button is-info">お問い合わせ</a></span> 
         </div>
       </nav>
@@ -55,7 +55,7 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="title">
-       Components
+       お問い合わせ
       </h1>
       <!--<h2 class="subtitle">
         subtitleを入れる場合
@@ -66,26 +66,45 @@
 
 
 <section class="section is-medium">
-    <div class="container">
-        <div class="content block-entry">
-            <h2>その他</h2>
-            <ul>
-<li>1.横幅100%表示</li>
-<li>2.真ん中揃え</li>
-<li>3.左揃え</li>
-<li>4.右揃え</li>
-</ul>
-<p>上記４点をボタンに適用してみます。</p>
-            <h3>横幅100%表示</h3>
-<a class="button is-fullwidth">Button</a>
-            <h3>真ん中揃え</h3>
-<a class="button has-text-centered">Button</a>
-            <h3>左揃え</h3>
-<a class="button has-text-left">Button</a>
-            <h3>右揃え</h3>
-            <a class="button has-text-right">Button</a>
-        </div>
-    </div>
+  <div class="container">
+    <div class="content block-entry is-slim">
+
+<h2>入力内容の確認</h2>
+<p>以下の内容でよろしければ、ページ下部の送信ボタンを押してください。<br>
+誤りがある場合は、前画面に戻って再度ご入力ください。</p>
+
+<label class="label">お名前</label>
+  <p class="control is-expanded">{$お名前.value}</p>
+
+<label class="label">ふりがな</label>
+  <p class="control is-expanded">{$ふりがな.value}</p>
+
+<label class="label">メールアドレス</label>
+<p class="control is-expanded">{$メールアドレス.value}</p>
+
+<label class="label">電話番号</label>
+<p class="control is-expanded">{$電話番号.value}</p>
+
+<label class="label">お問い合わせ内容</label>
+<p class="control is-expanded">{$お問い合わせ内容.value}</p>
+
+  <p class="control is-expanded">
+  <div class="has-text-centered">
+  <form method="post" action="index.php" class="inline">
+    {$hiddens}
+    <input type="hidden" name="page" value="finish">
+    <input type="submit" class="button is-medium is-info" value=" 送信する ">
+  </form>
+  <form method="post" action="index.php" class="inline" name="defaultLink">
+    {$hiddens}
+    <input type="hidden" name="page" value="input">
+    <input type="submit" class="button is-medium is-info is-outlined" value=" 前に戻る ">
+  </form>
+      </div>
+   </p>
+</div>
+
+  </div>
 </section>
 
 
@@ -128,7 +147,7 @@
  </footer>
 
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-<script src="./assets/js/common.js"></script>
+<script src="../assets/js/common.js"></script>
 
 </body>
 </html>
